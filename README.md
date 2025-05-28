@@ -38,6 +38,52 @@ in {
 }
 ```
 
+For example: 
+```
+{ config, pkgs, ... }:
+
+##############################################################################
+# Put *all* local bindings here ----------------------------------------------
+##############################################################################
+let
+  # Waterfox package from your local checkout
+  waterfox = import /etc/nixos/waterfox-for-nix { inherit pkgs; };
+in
+##############################################################################
+# Main configuration set starts here -----------------------------------------
+##############################################################################
+{
+  imports = [
+    ./hardware-configuration.nix
+    ./amdgpu.nix
+    ./apps.nix
+    ./bootloader.nix
+    ./derriks-apps.nix
+    ./docker-support.nix
+    ./fish-shell-support.nix
+    ./flake-support.nix
+    ./flatpak.nix
+    ./fstrim.nix
+    ./gamemode.nix
+    ./gnome-shell.nix
+    # ./cinnamon.nix
+    # ./pantheon.nix
+    # ./pantheon-packages.nix
+    # ./kde-plasma6.nix
+    ./keymap.nix
+    ./networking.nix
+    ./pipewire-support.nix
+    ./ssh-server.nix
+    ./steam.nix
+    ./swapfile.nix
+    ./tailscale-support.nix
+    ./timezone-localization.nix
+    ./unfree-packages.nix
+    ./unsecure-packages.nix
+    ./user-account.nix
+    ./virtualization-support.nix
+  ];
+```
 ### 4 · Rebuild
 
 ```bash
