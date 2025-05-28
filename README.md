@@ -34,7 +34,6 @@ Paste anywhere inside the top‑level set:
 let
   waterfox = import /etc/nixos/waterfox-for-nix { inherit pkgs; };
 in
-{
 ```
 
 For example: 
