@@ -21,7 +21,7 @@ sudo git clone https://github.com/soltros/waterfox-for-nix
 ### 2 · (Optional) bump to the newest Waterfox
 
 ```bash
-cd /etc/nixos/waterfox-for-nix
+cd /etc/nixos/
 sh update-default-nix.sh      # rewrites default.nix with new version + hash
 ```
 
