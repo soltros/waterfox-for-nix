@@ -33,34 +33,8 @@ Add waterfox to your imports:
 {
   imports = [
     ./hardware-configuration.nix
-    ./waterfox.nix
-    ./amdgpu.nix
-    ./apps.nix
-    ./bootloader.nix
-    ./derriks-apps.nix
-    ./docker-support.nix
-    ./fish-shell-support.nix
-    ./flake-support.nix
-    ./flatpak.nix
-    ./fstrim.nix
-    ./gamemode.nix
-    ./gnome-shell.nix
-    # ./cinnamon.nix
-    # ./pantheon.nix
-    # ./pantheon-packages.nix
-    # ./kde-plasma6.nix
-    ./keymap.nix
-    ./networking.nix
-    ./pipewire-support.nix
-    ./ssh-server.nix
-    ./steam.nix
-    ./swapfile.nix
-    ./tailscale-support.nix
-    ./timezone-localization.nix
-    ./unfree-packages.nix
-    ./unsecure-packages.nix
-    ./user-account.nix
-    ./virtualization-support.nix
+    ./waterfox-for-nix/waterfox.nix
+    ...
   ];
 ```
 ### 4 · Rebuild
