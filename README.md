@@ -4,7 +4,7 @@ A simple way to install Waterfox on NixOS as a package, rather than needing to u
 
 To install in your user profile, you can do:
 ```
-sudo git clone https://github.com/soltros/waterfox-for-nix.git
+git clone https://github.com/soltros/waterfox-for-nix.git
 cd waterfox-for-nix
 sh update-default-nix.sh
 nix-env -f . -iA waterfox
