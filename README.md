@@ -18,16 +18,14 @@ cd  /etc/nixos/waterfox-for-nix
 sudo git clone https://github.com/soltros/waterfox-for-nix 
 ```
 
-### 2 · (Optional) bump to the newest Waterfox
+### 2 · Generate new SHA for default.nix
 
 ```bash
 cd /etc/nixos/
 sh update-default-nix.sh      # rewrites default.nix with new version + hash
 ```
 
-### 3 · Add **one** code block to `/etc/nixos/configuration.nix`
-
-Add waterfox to your imports:
+### 3 · Add **waterfox.nix** to your imports:
 ```
 { config, pkgs, ... }:
 {
@@ -37,7 +35,11 @@ Add waterfox to your imports:
     ...
   ];
 ```
-### 4 · Rebuild
+### 4 · Add to configuration.nix and rebuild
+
+```
+programs.waterfox.enable = true;
+```
 
 ```bash
 sudo nixos-rebuild switch
