@@ -22,6 +22,7 @@ sudo git clone https://github.com/soltros/waterfox-for-nix
 
 ```bash
 cd /etc/nixos/
+nix-shell -p jq
 sh update-default-nix.sh      # rewrites default.nix with new version + hash
 ```
 
