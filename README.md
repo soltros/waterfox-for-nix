@@ -28,12 +28,6 @@ sh update-default-nix.sh      # rewrites default.nix with new version + hash
 ### 3 · Add **one** code block to `/etc/nixos/configuration.nix`
 
 Add waterfox to your imports:
-
-```nix
-
-```
-
-For example: 
 ```
 { config, pkgs, ... }:
 {
@@ -82,9 +76,8 @@ user** and persist across generations.
 
 ```bash
 cd /etc/nixos/waterfox-for-nix
-sh update-default-nix.sh      # bump version & hash
+sh update-default-nix.sh      # bump Waterfox to a new version & new SHA hash
 sudo nixos-rebuild switch
 ```
 
-Waterfox itself is [MPL‑2.0](https://www.mozilla.org/MPL/2.0/).  
-All packaging files in this repo are released under the same license.  
+Waterfox itself is [MPL‑2.0](https://www.mozilla.org/MPL/2.0/). 
