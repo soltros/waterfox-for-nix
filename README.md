@@ -30,12 +30,11 @@ sh update-default-nix.sh      # rewrites default.nix with new version + hash
 Paste anywhere inside the top‑level set:
 
 ```nix
-# --- Waterfox system-wide (local checkout) -------------------------------
+# --- Waterfox system-wide (local checkout) ---------------------------------
 let
   waterfox = import /etc/nixos/waterfox-for-nix { inherit pkgs; };
-in {
-  environment.systemPackages = [ waterfox ];
-}
+in
+{
 ```
 
 For example: 
