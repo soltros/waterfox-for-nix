@@ -18,8 +18,6 @@ cd  /etc/nixos/waterfox-for-nix
 sudo git clone https://github.com/soltros/waterfox-for-nix 
 ```
 
-*(If the folder exists, just `git -C /etc/nixos/waterfox-for-nix pull`.)*
-
 ### 2 · (Optional) bump to the newest Waterfox
 
 ```bash
