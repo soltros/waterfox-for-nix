@@ -27,32 +27,19 @@ sh update-default-nix.sh      # rewrites default.nix with new version + hash
 
 ### 3 · Add **one** code block to `/etc/nixos/configuration.nix`
 
-Paste anywhere inside the top‑level set:
+Add waterfox to your imports:
 
 ```nix
-# --- Waterfox system-wide (local checkout) ---------------------------------
-let
-  waterfox = import /etc/nixos/waterfox-for-nix { inherit pkgs; };
-in
+
 ```
 
 For example: 
 ```
 { config, pkgs, ... }:
-
-##############################################################################
-# Put *all* local bindings here ----------------------------------------------
-##############################################################################
-let
-  # Waterfox package from your local checkout
-  waterfox = import /etc/nixos/waterfox-for-nix { inherit pkgs; };
-in
-##############################################################################
-# Main configuration set starts here -----------------------------------------
-##############################################################################
 {
   imports = [
     ./hardware-configuration.nix
+    ./waterfox.nix
     ./amdgpu.nix
     ./apps.nix
     ./bootloader.nix
